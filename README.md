@@ -9,7 +9,7 @@
 
 | PROBLEMA | COMANDO |
 | ------ | ------ |
-| Quero alterar o comentário do meu último commit. | `git commit --amend -m "alterei o comentário"` |
+| Quero alterar o comentário do meu último commit. <br><br>**Atenção**: Não amende commits que já sofreram push.| `git commit --amend -m "alterei o comentário"` |
 | Quero listar as conexões remotas que meu repositório local tem incluindo a URL. | `git remote -v` |
 | Quero que meu repositório local tenha mais de uma conexão remota.  | `git remote add <nome> https://github.com/usuario/projeto.git`  |
 | Quero criar um ramo (branch) e ir direto para ele. | `git checkout -b <versão-1>` |
