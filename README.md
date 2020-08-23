@@ -20,6 +20,7 @@
 | Quero atualizar minha branch atual sem reescrever o histórico.  <br><br>**DICA** certifíque-se que você está na branch que gostaria de estar. | `git merge <nome-do-seu-remote>/master` |
 | Quero baixar os útimos commits e automaticamente reescrever meu repositório local na branch master. | `git pull --rebase <nome-do-seu-remote> master` |
 | Quero ver todos os commits do projeto organizado visualmente. | `git –-oneline –-graph --all` |
+| Quero fazer download de um pull request para a minha máquina | `git fetch origin pull/ID_DO_PR/head:NOMEBRANCH` |
 
 <br>
 <h2 align="center">
