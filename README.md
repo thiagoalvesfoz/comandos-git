@@ -11,16 +11,16 @@
 | ------ | ------ |
 | Quero alterar o comentário do meu último commit. <br><br>**Atenção**: Não amende commits que já sofreram push.| `git commit --amend -m "alterei o comentário"` |
 | Quero listar as conexões remotas que meu repositório local tem incluindo a URL. | `git remote -v` |
-| Quero que meu repositório local tenha mais de uma conexão remota. <br><br>**DICA:** Sério, você não é obrigado a fazer isso, mas caso queira mesmo adicionar uma nova "origin", utilize o nome **upstream**.  | `git remote add <nome> https://github.com/usuario/projeto.git`  |
-| Quero criar um ramo (branch) e ir direto para ele. | `git checkout -b <versão-1>` |
+| Quero que meu repositório local tenha mais de uma conexão remota. <br><br>**DICA:** Sério, você não é obrigado a fazer isso, mas caso queira mesmo adicionar uma nova "origin", utilize o nome **upstream**.  | `git remote add <nome> <link-repositorio-remoto>`  |
+| Quero criar um ramo (branch) e ir direto para ele. | `git checkout -b <nome-da-branch>` |
 | Quero remover uma branch que não utilizo mais. | `git branch -d <nome-da-branch>` |
-| Quero sair da minha branch atual e voltar para a branch master. | `git checkout master` |
+| Quero sair da minha branch atual e voltar para a branch master. | `git checkout <nome-da-branch>` |
 | Quero baixar os últimos commits do repositório remoto, mas não quero aplicar as mudanças no meu repositório local ainda. | `git fetch <nome-do-seu-remote>` |
-| Quero atualizar minha branch atual reescrevendo o histórico com as atualizações mais recentes da branch master de uma conexão remota específica.  <br><br>**DICA** certifíque-se que você está na branch que gostaria de estar. | `git rebase <nome-do-seu-remote>/master` |
-| Quero atualizar minha branch atual sem reescrever o histórico.  <br><br>**DICA** certifíque-se que você está na branch que gostaria de estar. | `git merge <nome-do-seu-remote>/master` |
-| Quero baixar os útimos commits e automaticamente reescrever meu repositório local na branch master. | `git pull --rebase <nome-do-seu-remote> master` |
+| Quero atualizar minha branch atual reescrevendo o histórico com as atualizações mais recentes da branch master de uma conexão remota específica.  <br><br>**DICA** certifíque-se que você está na branch que gostaria de estar. | `git rebase <nome-do-seu-remote>/<nome-da-branch>` |
+| Quero atualizar minha branch atual sem reescrever o histórico.  <br><br>**DICA** certifíque-se que você está na branch que gostaria de estar. | `git merge <nome-do-seu-remote>/<nome-da-branch>` |
+| Quero baixar os útimos commits e automaticamente reescrever meu repositório local na branch master. | `git pull --rebase <nome-do-seu-remote> <nome-da-branch>` |
 | Quero ver todos os commits do projeto organizado visualmente. | `git –-oneline –-graph --all` |
-| Quero fazer download de um pull request para a minha máquina | `git fetch origin pull/ID_DO_PR/head:NOMEBRANCH` |
+| Quero fazer download de um pull request para a minha máquina | `git fetch origin pull/ID_PULL-REQUEST/head:NOME-DA-BRANCH` |
 
 <br>
 <h2 align="center">
@@ -32,9 +32,9 @@
 | Quero desfazer todas as minhas alterações não comitadas e retornar ao ponto do último commit. | `git clean -df`  <br>    `git checkout -- .` |
 | Preciso remover o último commit, porém mantendo os arquivos do jeito que estão. | `git reset --soft HEAD~1` |
 | Preciso remover o último commit, inclusive as alterações nos arquivos. <br><br> **ATENÇÃO:** Este comando não apenas descarta as alterações como também reverte todas as alterações no diretório para o estado do <br> commit em que foi especificado no comando.  | `git reset --hard HEAD~1` |
-| Preciso apagar o último commit no **GitHub**. | `git push -f origin HEAD^:master` |
-| Quero mudar o meu repositório remoto “origin”. | `git remote set-url origin https://github.com/usuario/novoprojeto.git` |
-| Quero alterar o editor padrão do git. | `git config –-global core.editor “...diretório\sua-ide.extensao”` |
+| Preciso apagar o último commit no **GitHub**. | `git push -f origin HEAD^:<nome-da-branch>` |
+| Quero mudar o meu repositório remoto “origin”. | `git remote set-url origin <URL-DO-NOVO-REPOSITORIO>` |
+| Quero alterar o editor padrão do git. | `git config –-global core.editor “diretório\sua-ide.extensao”` |
 | Entrei no VIM por engano. Como sair? | Tecle `ESC`, depois digite `:q!` e tecle `ENTER` |
 
 
